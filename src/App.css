@@ -52,6 +52,7 @@ scrollbar-width: none;  /* Firefox */
 
 .sideNavContainer{
   padding: 30px 30px 0px 30px;
+  border-right: 1px solid rgb(172, 170, 170);
 }
 
 .bodyContainer{

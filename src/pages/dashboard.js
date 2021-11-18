@@ -100,13 +100,12 @@ const Dashboard =()=>{
         setNotifState(prevState => !prevState);
     }
 
+    const [searchQuery, setSearchQuery] = useState("");
+
    
 
     //This is an effect to fetch the news api on page load
     useEffect(()=>{
-        setTimeout(()=>{
-            setLoader(false);
-        },1000)
         axios.get(`https://api.unsplash.com/photos?page=10&client_id=W6FTtcObb327UiNFP76QTgeucULryadqXBbyUOfKvw0`)
             .then(function (response) {
                 debugger
@@ -126,7 +125,30 @@ const Dashboard =()=>{
                 // always executed
             });
             //eslint-disable-next-line
-    },[])
+    },[]);
+
+    const searchPhotos = () => {
+        debugger
+            axios.get(`https://api.unsplash.com/search/photos?page=1&query=${searchQuery}&client_id=W6FTtcObb327UiNFP76QTgeucULryadqXBbyUOfKvw0`)
+                .then(function (response) {
+                    debugger
+                    // handle success
+                    setData(response.data.results);
+                    setLoader(false);
+                
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                    alert('Error occured in loading All Data');
+                    setLoader(false);
+                })
+                .then(function () {
+                    setLoader(false);
+                    // always executed
+                });
+        
+    }
   
       
     return(
@@ -151,6 +173,8 @@ const Dashboard =()=>{
                                                 id="search-area"
                                                 type='text'
                                                 variant="standard"
+                                                value={searchQuery}
+                                                onChange={(e) => setSearchQuery(e.target.value)}
                                                 className={classes.searchInput}
                                                 disableUnderline={true}
                                                 InputProps={{
@@ -166,6 +190,7 @@ const Dashboard =()=>{
                                                         <InputAdornment position="end" className="purpleButton">
                                                             <Button
                                                             edge="end"
+                                                            onClick={searchPhotos}
                                                             >
                                                                 <span className="nibbuttonText">Search</span>
                                                             </Button>
