@@ -1,0 +1,59 @@
+@import "./colors";
+
+.purpleButton{
+    background-color: $nib-purple !important;
+    color: $nib-white !important;
+    border-radius: 8px;
+    padding: 20px 25px;
+    height: 50px !important;
+
+    .nibbuttonText{
+        font-size: 16px;
+        color: $nib-white !important;
+    }
+
+}
+
+.redButton{
+    background-color: $nib-red !important;
+    color: $nib-white !important;
+    border-radius: 8px;
+    padding: 20px 25px;
+    height: 50px !important;
+
+    .nibbuttonText{
+        font-size: 20px;
+        color: $nib-white;
+    }
+
+}
+
+.purpleCardButton{
+    background-color: $nib-purple !important;
+    color: $nib-white !important;
+    border-radius: 8px;
+    padding: 20px 25px;
+    height: 40px !important;
+    width: 100px;
+
+    .nibcardbuttonText{
+        font-size: 20px;
+        color: $nib-white !important;
+    }
+
+}
+
+.redCardButton{
+    background-color: $nib-red !important;
+    color: $nib-white !important;
+    border-radius: 8px;
+    padding: 20px 25px;
+    height: 40px !important;
+    width: 100px;
+
+    .nibcardbuttonText{
+        font-size: 20px;
+        color: $nib-white;
+    }
+
+}

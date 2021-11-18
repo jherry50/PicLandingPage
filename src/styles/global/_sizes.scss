@@ -1,0 +1,15 @@
+@mixin nib-mob-padding {
+    padding: 20px 10px;
+}
+
+@mixin nib-tab-padding {
+    padding: 20px 20px !important;
+}
+
+@mixin nib-laptop-padding {
+    padding: 100px 60px !important;
+}
+
+@mixin nib-x-laptop-padding {
+    padding: 100px 100px !important;
+}

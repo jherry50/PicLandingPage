@@ -1,0 +1,48 @@
+@import "../global/colors";
+
+
+.quick-menu {
+    width: 350px;
+    // height: 100vh;
+    & .dropdown-menu {
+        padding: 5px 10px;
+    //   width: 250px;
+    //   height: 250px;
+  
+      &:after {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid $nib-white;
+        top: -9px;
+        content: "";
+        height: 9px;
+        position: absolute;
+        right: 8px;
+        width: 10px;
+      }
+  
+      &:before {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid $nib-black;
+        top: -10px;
+        content: "";
+        height: 10px;
+        position: absolute;
+        right: 8px;
+        width: 10px;
+      }
+  
+      @media screen and (max-width: 449px) {
+        width: 280px;
+      }
+  
+      @media screen and (max-width: 359px) {
+        width: 240px;
+      }
+    }
+}
+
+.headerProfName{
+  margin-right: 20px !important;
+}
