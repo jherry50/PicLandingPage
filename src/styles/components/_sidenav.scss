@@ -1,0 +1,24 @@
+.sideMenuList{
+    list-style-type: none;
+    color: $nib-black;
+    margin-left: -20px;
+
+    li{
+        padding: 15px 0px;
+    }
+}
+.navItem{
+    color: $nib-gray !important;
+    text-decoration: none;
+}
+.navSubhead{
+    margin:20px;
+}
+.navItemIcon{
+    margin-right: 10px;
+}
+
+.navActiveItem{
+    color: $nib-black !important;
+    border: 1px solid $nib-gray;
+}
