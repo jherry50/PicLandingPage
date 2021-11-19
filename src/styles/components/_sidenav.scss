@@ -7,6 +7,9 @@
         padding: 15px 0px;
     }
 }
+.menuList{
+    margin-top: 50px;
+}
 .navItem{
     color: $nib-gray !important;
     text-decoration: none;
@@ -20,5 +23,5 @@
 
 .navActiveItem{
     color: $nib-black !important;
-    border: 1px solid $nib-gray;
+    border: 1px solid $nib-gray !important;
 }

@@ -160,6 +160,7 @@ const Dashboard =()=>{
                                 <SideNav/>
                             </Grid>
                             <Grid item xs={12} md={10} className="bodyContainer">
+                                {/* header */}
                                 <Grid container spacing={2}>
                                     <Grid className="desktopSearch" item xs={12} md={7} lg={9}>
                                         <FormControl sx={{width: '100%' }} variant="outlined">
@@ -207,7 +208,7 @@ const Dashboard =()=>{
                                             </DropdownToggle>
 
                                             <DropdownMenu right>
-                                                    <Grid container>
+                                                    <Grid container className="notifItem">
                                                         <Grid item xs={3}>
                                                             <Avatar
                                                                 alt="Bola Ilesanmi"
@@ -226,6 +227,28 @@ const Dashboard =()=>{
                                                         <Grid item xs={3}>
                                                             <div style={{width: "100%", textAlign: "center"}}>
                                                                 <FavoriteIcon fontSize="medium" style={{color: "#858390"}}/>
+                                                            </div>
+                                                        </Grid>
+                                                    </Grid>
+                                                    <Grid container className="notifItem">
+                                                        <Grid item xs={3}>
+                                                            <Avatar
+                                                                alt="Bola Ilesanmi"
+                                                                src={profilePicture}
+                                                                sx={{ width: 36, height: 36 }}
+                                                            />
+                                                        </Grid>
+                                                        <Grid item xs={6}>
+                                                            <Typography  variant="body2" gutterBottom component="div">
+                                                                Jack liked you!
+                                                            </Typography>
+                                                            <Typography sx={{fontSize: '9px'}} variant="caption" gutterBottom component="div">
+                                                                About 40 minutes ago!
+                                                            </Typography>
+                                                        </Grid>
+                                                        <Grid item xs={3}>
+                                                            <div style={{width: "100%", textAlign: "center"}}>
+                                                                <FavoriteIcon fontSize="medium" style={{color: "#d43844"}}/>
                                                             </div>
                                                         </Grid>
                                                     </Grid>
@@ -289,6 +312,8 @@ const Dashboard =()=>{
 
                                 {/* container for select boxes */}
                                 <SelectBoxes/>
+
+                                {/* container for cards */}
                                 <div className="cardContainer">
                                     {
                                         data.map((item) => {
